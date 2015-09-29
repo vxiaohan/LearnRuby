@@ -51,3 +51,4 @@ end
 print factorial
 
 print "\nTest"
+print "Test Mac"
