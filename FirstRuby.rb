@@ -47,9 +47,59 @@ def factorial(n=4)
     n*factorial(n-1)
   end
 end
+class Point
+  def initialize(x,y)
+    @x,@y = x,y
+  end
 
+  def to_s
+    "(#@x,#@y)"
+  end
+  
+  def x
+    @x
+  end
+  def y
+    @y
+  end
+  
+  def x=(value)
+    @x=value
+  end
+  
+  def y=(value)
+    @y=value
+  end
+end
+
+class Point3D < Point
+  def initialize(x,y,z)
+    super(x,y)
+    @z=z
+  end
+  
+  def to_s
+    "(#@x,#@y,#@z)"
+  end
+  def z
+    @z
+  end
+  def z=(value)
+    @z=value
+  end
+end
 print factorial
 
 print "\nTest"
 print "Test Mac"
-print "test branch"
+print "test branch\n"
+
+p = Point3D.new(1,2,3)
+puts p.class
+puts p.is_a? Point
+puts p
+p.x=4
+p.y=5
+p.z=6
+puts p
+
