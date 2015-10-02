@@ -1,3 +1,4 @@
+require './RubyClass.rb'
 =begin
 3.times{print "Ruby"}
 3.times{print "Ruby"}
@@ -47,47 +48,7 @@ def factorial(n=4)
     n*factorial(n-1)
   end
 end
-class Point
-  def initialize(x,y)
-    @x,@y = x,y
-  end
 
-  def to_s
-    "(#@x,#@y)"
-  end
-  
-  def x
-    @x
-  end
-  def y
-    @y
-  end
-  
-  def x=(value)
-    @x=value
-  end
-  
-  def y=(value)
-    @y=value
-  end
-end
-
-class Point3D < Point
-  def initialize(x,y,z)
-    super(x,y)
-    @z=z
-  end
-  
-  def to_s
-    "(#@x,#@y,#@z)"
-  end
-  def z
-    @z
-  end
-  def z=(value)
-    @z=value
-  end
-end
 print factorial
 
 print "\nTest"
@@ -102,6 +63,12 @@ p.x=4
 p.y=5
 p.z=6
 puts p
+puts p.test
+p2 = Point3D.new(1,2,3)
+puts p2.test
+p2.test=3
+puts p.test
+puts p2.test
 =begin
 value=Thread.new{print "Thread1"
   puts Thread.current
@@ -112,6 +79,7 @@ puts Thread.current
 Kernel.sleep(10000)
 =end
 
+=begin
 y = 0.upto(5) do |x| 
   puts x
 end
@@ -119,3 +87,13 @@ print "y:"
 puts y
 x=0 
 while x<10 do puts x;x+=1; end
+
+a = Array.new()
+1.upto(3) do |x|
+  a[x-1]=x*100+x*10+x
+end
+puts a.length()
+1.upto(4) do |x|
+    puts a[x-1]
+end
+=end
