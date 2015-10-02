@@ -102,4 +102,20 @@ p.x=4
 p.y=5
 p.z=6
 puts p
+=begin
+value=Thread.new{print "Thread1"
+  puts Thread.current
+  puts Kernel.sleep
+  puts "Sleep over"
+  }
+puts Thread.current
+Kernel.sleep(10000)
+=end
 
+y = 0.upto(5) do |x| 
+  puts x
+end
+print "y:"
+puts y
+x=0 
+while x<10 do puts x;x+=1; end
