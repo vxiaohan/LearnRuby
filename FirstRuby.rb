@@ -97,3 +97,31 @@ puts a.length()
     puts a[x-1]
 end
 =end
+
+=begin
+A_a=1111
+puts A_a
+A_a=222
+puts A_a
+=end
+
+=begin
+s="Hello"
+s.concat(" World")
+s.insert(5, " the")
+=end
+
+
+#测试一下单行运行
+=begin
+test_integer="1003"
+
+a_integer=test_integer.to_i
+
+test_integer = 100
+puts test_integer-3
+=end
+
+puts t=Time.now
+puts t.hour
+
