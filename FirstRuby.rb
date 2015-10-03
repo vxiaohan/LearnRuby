@@ -113,14 +113,12 @@ s.insert(5, " the")
 
 
 #测试一下单行运行
-=begin
 test_integer="1003"
 
 a_integer=test_integer.to_i
 
 test_integer = 100
 puts test_integer-3
-=end
 
 puts t=Time.now
 puts t.hour
